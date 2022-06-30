@@ -1,0 +1,18 @@
+import React from "react";
+import classes from "./Navbar.module.css";
+
+const Navbar = (props) => {
+  return (
+    <div className={classes.navbar}>
+      <h1>Testing</h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#faq">FAQ</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  );
+};
+
+export default Navbar;
