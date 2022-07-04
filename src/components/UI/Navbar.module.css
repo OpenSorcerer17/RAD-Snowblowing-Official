@@ -1,14 +1,22 @@
 .navbar {
+    overflow: hidden;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     color: #333;
     height: 60px;
-    width: auto;
-    padding: .2rem 1rem;
+    width: 100%;
     align-items: center;
-    position: relative;
     background: #99cfe8;
-    z-index: 0;
+    z-index: 1;
+}
+
+.navbar nav {
+    padding: 0.2rem 2rem;
+}
+
+.navbar .navbar__logo {
+    padding-left: 2rem;
 }
 
 .navbar a {
@@ -16,4 +24,5 @@
     font-weight: 500;
     margin-left: 25px;
     padding: 7px 7px;
+    text-decoration: none;
 }
