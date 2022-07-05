@@ -6,6 +6,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
 }
 
 .landing__content {
@@ -30,6 +31,9 @@
     border-radius: 15%;
     display: flex;
     justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    min-width: 100px;
     font-size: large;
     background-color: #DDDDDD;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

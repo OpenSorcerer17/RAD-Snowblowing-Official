@@ -26,3 +26,8 @@
     padding: 7px 7px;
     text-decoration: none;
 }
+
+.navbar a:hover {
+    color: white;
+    border-bottom: 3px solid #164f91;
+}
