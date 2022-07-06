@@ -2,11 +2,12 @@
     background-color: antiquewhite;
     width: 50%;
     margin: auto;
-    overflow: auto;
+    overflow: hidden;
+    display: flex;
 }
 
 .quote__container h1 {
-    text-align: center;
+    
 }
 
 .quote__container label {
@@ -34,10 +35,39 @@
 }
 
 .quote__container__checkbox  {
-}
-
-/* .quote__container__checkbox label{
-    text-align: text;
     display: flex;
     flex-direction: column;
-} */
+}
+
+.quote__container__checkbox input  {
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+}
+
+.quote__container button {
+    width: 100px;
+    margin-left: 10px;
+    margin-bottom: 8px;
+}
+
+.lower__styling textarea {
+    width: 500px;
+    height: 150px;
+    padding: 12px 20px;
+    margin-left: 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+
+.lower__styling p {
+    margin-left: 12px;
+}
