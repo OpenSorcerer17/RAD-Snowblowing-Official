@@ -5,7 +5,7 @@ const QuoteFormItem = props => {
     <Fragment>
     {props.inputType==="checkbox" &&
     <label>
-    <input type={props.inputType} name={props.inputName} required  onChange={props.changeHandler} />
+    <input type={props.inputType} name={props.inputName}   onChange={props.changeHandler} />
     {props.content}
     </label>}
     {props.inputType!="checkbox" && <label>

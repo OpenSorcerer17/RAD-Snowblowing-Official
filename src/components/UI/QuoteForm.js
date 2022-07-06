@@ -43,9 +43,11 @@ const QuoteForm = props => {
             setError(prevState => ({
                 error: {
                     ...prevState.error,
-                    message: "Please enter a valid 10 digit phone number"
+                    message: "Please enter a valid 10 digit phone number",
+                    error: true
                 }
             }))
+            console.log(error['message']);
         }
     };
 
@@ -78,9 +80,10 @@ const QuoteForm = props => {
             <textarea></textarea>
         </div>
         <button type="submit">Submit</button>
+        {error.error && <p>{error.message}</p>}
         
         
-    </form >
+    </form>
     </div></Fragment>
         
     );
