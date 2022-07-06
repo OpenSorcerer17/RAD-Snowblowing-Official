@@ -1,3 +1,43 @@
-.test {
-    max-height: 100%;
+.quote__container {
+    background-color: antiquewhite;
+    width: 50%;
+    margin: auto;
+    overflow: auto;
 }
+
+.quote__container h1 {
+    text-align: center;
+}
+
+.quote__container label {
+    display: block;
+    text-align: left;
+    width: 400px;
+    line-height: 26px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.quote__container form {
+    background-color: antiquewhite;
+}
+
+.quote__container input {
+    display: block;
+    height: 20px;
+    width: 300px;
+}
+
+.quote__container__row {
+    display: flex;
+    flex-direction: row;
+}
+
+.quote__container__checkbox  {
+}
+
+/* .quote__container__checkbox label{
+    text-align: text;
+    display: flex;
+    flex-direction: column;
+} */
