@@ -1,8 +1,10 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, useRef } from "react";
 import classes from "./QuoteForm.module.css";
 import QuoteFormItem from "./QuoteFormItem";
+import emailjs from "emailjs-com";
 
 const QuoteForm = (props) => {
+  const form = useRef();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -11,48 +13,41 @@ const QuoteForm = (props) => {
   const [city, setCity] = useState("");
   const [additionalInfo, setAdditionalInfo] = useState("");
   const [error, setError] = useState("");
-  const [checkBoxes, setCheckboxes] = useState({
-    deIce: false,
-    shovel: false,
-    test3: false,
-    test4: false,
-  });
+  const [deIce, setDeIce] = useState("No Deicing");
+  const [shovel, setShovel] = useState("No Shoveling");
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
-    const emailToSend = {
-      first_name: firstName,
-      last_name: lastName,
-      email: email,
-      phone_numer: phone,
-      address: address,
-      city: city,
-      additional_info: additionalInfo,
-      checkBoxes: checkBoxes,
-    };
+
     setError("");
+    console.log(deIce);
 
     if (phone.trim().length != 10) {
       setError("Please enter a valid phone number");
       return;
     }
 
-    console.log(emailToSend);
+    emailjs
+      .sendForm(
+        "service_2sunubk",
+        "template_csywi4g",
+        form.current,
+        "1bTVL6KPTvsqyHpBj"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    event.target.reset();
   };
 
   const textAreaHandler = (event) => {
     setAdditionalInfo(document.getElementById("additionalInfo").value);
-  };
-
-  const checkBoxHandler = (event, currentBox) => {
-    if (event.target.checked) {
-      let newCheckboxes = { ...checkBoxes, [currentBox]: true };
-      setCheckboxes(newCheckboxes);
-    } else {
-      let newCheckboxes = { ...checkBoxes, [currentBox]: false };
-      setCheckboxes(newCheckboxes);
-    }
-    console.log(checkBoxes);
   };
 
   return (
@@ -61,7 +56,7 @@ const QuoteForm = (props) => {
         Fill out the form below to get your quote!
       </h1>
       <div className={classes.quote__container} id="pricing">
-        <form onSubmit={onSubmitHandler}>
+        <form onSubmit={onSubmitHandler} ref={form}>
           <div className={classes.quote__container__row}>
             <QuoteFormItem
               changeHandler={(e) => {
@@ -119,25 +114,24 @@ const QuoteForm = (props) => {
           <div className={classes.quote__container__checkbox}>
             <div className={classes.quote__container__row}>
               <QuoteFormItem
-                changeHandler={(e) => checkBoxHandler(e, "deIce")}
+                changeHandler={(e) => {
+                  setDeIce("No Deicing");
+                  if (e.target.checked) {
+                    setDeIce("I would like Deicing Services.");
+                  }
+                }}
                 content="I want de-icing services"
                 inputType="checkbox"
+                inputName="deIce"
               />
               <QuoteFormItem
-                changeHandler={(e) => checkBoxHandler(e, "shovel")}
+                changeHandler={(e) => {
+                  setShovel("No Shoveling");
+                  if (e.target.checked) {
+                    setShovel("I would like Shoveling Services.");
+                  }
+                }}
                 content="I want my walkway shoveled"
-                inputType="checkbox"
-              />
-            </div>
-            <div className={classes.quote__container__row}>
-              <QuoteFormItem
-                changeHandler={(e) => checkBoxHandler(e, "test3")}
-                content="Test 3"
-                inputType="checkbox"
-              />
-              <QuoteFormItem
-                changeHandler={(e) => checkBoxHandler(e, "test4")}
-                content="Test 4"
                 inputType="checkbox"
               />
             </div>
@@ -145,7 +139,11 @@ const QuoteForm = (props) => {
 
           <div className={classes.lower__styling}>
             <p>Include any additional information that might help us </p>
-            <textarea id="additionalInfo" onChange={textAreaHandler}></textarea>
+            <textarea
+              id="additionalInfo"
+              name="additionalInfo"
+              onChange={textAreaHandler}
+            ></textarea>
           </div>
           <button type="submit">Submit</button>
           {error && <p>{error}</p>}
