@@ -4,6 +4,7 @@
     margin: auto;
     overflow: hidden;
     display: flex;
+    padding-bottom: 50px;
 }
 
 .quote__container h1 {

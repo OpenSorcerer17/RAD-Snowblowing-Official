@@ -2,6 +2,7 @@ import React, { useState, Fragment, useRef } from "react";
 import classes from "./QuoteForm.module.css";
 import QuoteFormItem from "./QuoteFormItem";
 import emailjs from "emailjs-com";
+import SubmitModal from "./SubmitModal";
 
 const QuoteForm = (props) => {
   const form = useRef();
@@ -15,35 +16,49 @@ const QuoteForm = (props) => {
   const [error, setError] = useState("");
   const [deIce, setDeIce] = useState("No Deicing");
   const [shovel, setShovel] = useState("No Shoveling");
+  const [showModal, setShowModal] = useState(false);
+  const [previousSubmit, setPreviousSubmit] = useState(
+    localStorage.getItem("submitted")
+  );
+
+  const closeModalHandler = (props) => {
+    setShowModal(false);
+  };
 
   const onSubmitHandler = (event) => {
+    if (previousSubmit) {
+      setShowModal(true);
+      return;
+    }
     event.preventDefault();
 
     setError("");
-    console.log(deIce);
-
     if (phone.trim().length != 10) {
       setError("Please enter a valid phone number");
       return;
     }
 
-    emailjs
-      .sendForm(
-        "service_2sunubk",
-        "template_csywi4g",
-        form.current,
-        "1bTVL6KPTvsqyHpBj"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    console.log(form.current);
+    // emailjs
+    //   .sendForm(
+    //     "service_2sunubk",
+    //     "template_csywi4g",
+    //     form.current,
+    //     "1bTVL6KPTvsqyHpBj"
+    //   )
+    //   .then(
+    //     (result) => {
+    //       console.log(result.text);
+    //     },
+    //     (error) => {
+    //       console.log(error.text);
+    //     }
+    //   );
 
     event.target.reset();
+    setShowModal(true);
+    localStorage.setItem("submitted", true);
+    setPreviousSubmit(true);
   };
 
   const textAreaHandler = (event) => {
@@ -52,6 +67,15 @@ const QuoteForm = (props) => {
 
   return (
     <Fragment>
+      {showModal && (
+        <SubmitModal
+          first_name={firstName}
+          last_name={lastName}
+          previous_submit={previousSubmit}
+          closeModalHandler={closeModalHandler}
+          resubmit={onSubmitHandler}
+        />
+      )}
       <h1 className={classes.quote__container}>
         Fill out the form below to get your quote!
       </h1>
