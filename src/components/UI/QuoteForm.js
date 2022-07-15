@@ -17,19 +17,12 @@ const QuoteForm = (props) => {
   const [deIce, setDeIce] = useState("No Deicing");
   const [shovel, setShovel] = useState("No Shoveling");
   const [showModal, setShowModal] = useState(false);
-  const [previousSubmit, setPreviousSubmit] = useState(
-    localStorage.getItem("submitted")
-  );
 
   const closeModalHandler = (props) => {
     setShowModal(false);
   };
 
   const onSubmitHandler = (event) => {
-    if (previousSubmit) {
-      setShowModal(true);
-      return;
-    }
     event.preventDefault();
 
     setError("");
@@ -38,7 +31,6 @@ const QuoteForm = (props) => {
       return;
     }
 
-    console.log(form.current);
     // emailjs
     //   .sendForm(
     //     "service_2sunubk",
@@ -57,8 +49,6 @@ const QuoteForm = (props) => {
 
     event.target.reset();
     setShowModal(true);
-    localStorage.setItem("submitted", true);
-    setPreviousSubmit(true);
   };
 
   const textAreaHandler = (event) => {
@@ -71,9 +61,7 @@ const QuoteForm = (props) => {
         <SubmitModal
           first_name={firstName}
           last_name={lastName}
-          previous_submit={previousSubmit}
           closeModalHandler={closeModalHandler}
-          resubmit={onSubmitHandler}
         />
       )}
       <h1 className={classes.quote__container}>
