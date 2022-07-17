@@ -6,6 +6,7 @@ import SubmitModal from "./SubmitModal";
 
 const QuoteForm = (props) => {
   const form = useRef();
+  const submitForm = useRef();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -31,21 +32,23 @@ const QuoteForm = (props) => {
       return;
     }
 
-    // emailjs
-    //   .sendForm(
-    //     "service_2sunubk",
-    //     "template_csywi4g",
-    //     form.current,
-    //     "1bTVL6KPTvsqyHpBj"
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log(result.text);
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
+    let emailToSend = {
+      first_name: firstName,
+      last_name: lastName,
+      email: email,
+      phone: phone,
+      address: address,
+      city: city,
+      deIce: deIce,
+      shovel: shovel,
+      additionalInfo: additionalInfo,
+    };
+    emailjs.send(
+      "service_2sunubk",
+      "template_csywi4g",
+      emailToSend,
+      "1bTVL6KPTvsqyHpBj"
+    );
 
     event.target.reset();
     setShowModal(true);
@@ -77,6 +80,7 @@ const QuoteForm = (props) => {
               content="First name"
               inputType="text"
               inputName="first_name"
+              inputId="first_name"
             />
             <QuoteFormItem
               changeHandler={(e) => {
@@ -85,6 +89,7 @@ const QuoteForm = (props) => {
               content="Last name"
               inputType="text"
               inputName="last_name"
+              inputId="last_name"
             />
           </div>
           <div className={classes.quote__container__row}>
@@ -95,6 +100,7 @@ const QuoteForm = (props) => {
               content="Email"
               inputType="email"
               inputName="email"
+              inputId="email"
             />
             <QuoteFormItem
               changeHandler={(e) => {
@@ -103,6 +109,7 @@ const QuoteForm = (props) => {
               content="Phone Number"
               inputType="tel"
               inputName="phone"
+              inputId="phone"
             />
           </div>
           <div className={classes.quote__container__row}>
@@ -113,6 +120,7 @@ const QuoteForm = (props) => {
               content="Street Address"
               inputType="text"
               inputName="address"
+              inputId="address"
             />
             <QuoteFormItem
               changeHandler={(e) => {
@@ -121,6 +129,7 @@ const QuoteForm = (props) => {
               content="City"
               inputType="text"
               inputName="city"
+              inputId="city"
             />
           </div>
           <div className={classes.quote__container__checkbox}>
@@ -135,6 +144,7 @@ const QuoteForm = (props) => {
                 content="I want de-icing services"
                 inputType="checkbox"
                 inputName="deIce"
+                inputId="deIce"
               />
               <QuoteFormItem
                 changeHandler={(e) => {
@@ -145,6 +155,8 @@ const QuoteForm = (props) => {
                 }}
                 content="I want my walkway shoveled"
                 inputType="checkbox"
+                inputName="shovel"
+                inputId="shovel"
               />
             </div>
           </div>
