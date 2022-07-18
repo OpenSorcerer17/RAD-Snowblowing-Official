@@ -132,32 +132,30 @@ const QuoteForm = (props) => {
             />
           </div>
           <div className={classes.quote__container__checkbox}>
-            <div className={classes.quote__container__row}>
-              <QuoteFormItem
-                changeHandler={(e) => {
-                  setDeIce("No Deicing");
-                  if (e.target.checked) {
-                    setDeIce("I would like Deicing Services.");
-                  }
-                }}
-                content="I want de-icing services"
-                inputType="checkbox"
-                inputName="deIce"
-                inputId="deIce"
-              />
-              <QuoteFormItem
-                changeHandler={(e) => {
-                  setShovel("No Shoveling");
-                  if (e.target.checked) {
-                    setShovel("I would like Shoveling Services.");
-                  }
-                }}
-                content="I want my walkway shoveled"
-                inputType="checkbox"
-                inputName="shovel"
-                inputId="shovel"
-              />
-            </div>
+            <QuoteFormItem
+              changeHandler={(e) => {
+                setDeIce("No Deicing");
+                if (e.target.checked) {
+                  setDeIce("I would like Deicing Services.");
+                }
+              }}
+              content="I want de-icing services"
+              inputType="checkbox"
+              inputName="deIce"
+              inputId="deIce"
+            />
+            <QuoteFormItem
+              changeHandler={(e) => {
+                setShovel("No Shoveling");
+                if (e.target.checked) {
+                  setShovel("I would like Shoveling Services.");
+                }
+              }}
+              content="I want my walkway shoveled"
+              inputType="checkbox"
+              inputName="shovel"
+              inputId="shovel"
+            />
           </div>
 
           <div className={classes.lower__styling}>

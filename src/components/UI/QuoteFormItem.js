@@ -1,20 +1,23 @@
 import React, { Fragment } from "react";
+import classes from "./QuoteFormItem.module.css";
 
 const QuoteFormItem = (props) => {
   return (
     <Fragment>
       {props.inputType === "checkbox" && (
-        <label>
-          <input
-            id={props.inputId}
-            type={props.inputType}
-            name={props.inputName}
-            onChange={props.changeHandler}
-          />
-          {props.content}
-        </label>
+        <div className={classes.checkbox}>
+          <label>
+            <input
+              id={props.inputId}
+              type={props.inputType}
+              name={props.inputName}
+              onChange={props.changeHandler}
+            />
+            {props.content}
+          </label>
+        </div>
       )}
-      {props.inputType != "checkbox" && (
+      {props.inputType !== "checkbox" && (
         <label>
           {props.content}
           <input
