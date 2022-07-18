@@ -8,9 +8,10 @@ function App() {
   return (
     <Fragment>
       <Navbar />
-      <Landing/>
-      <QuoteForm />
-      
+      <Landing />
+      <div className="container">
+        <QuoteForm />
+      </div>
     </Fragment>
   );
 }

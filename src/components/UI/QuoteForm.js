@@ -43,12 +43,12 @@ const QuoteForm = (props) => {
       shovel: shovel,
       additionalInfo: additionalInfo,
     };
-    emailjs.send(
-      "service_2sunubk",
-      "template_csywi4g",
-      emailToSend,
-      "1bTVL6KPTvsqyHpBj"
-    );
+    // emailjs.send(
+    //   "service_2sunubk",
+    //   "template_csywi4g",
+    //   emailToSend,
+    //   "1bTVL6KPTvsqyHpBj"
+    // );
 
     event.target.reset();
     setShowModal(true);
@@ -67,10 +67,9 @@ const QuoteForm = (props) => {
           closeModalHandler={closeModalHandler}
         />
       )}
-      <h1 className={classes.quote__container}>
-        Fill out the form below to get your quote!
-      </h1>
+
       <div className={classes.quote__container} id="pricing">
+        <h1>Fill out the form below to get your quote!</h1>
         <form onSubmit={onSubmitHandler} ref={form}>
           <div className={classes.quote__container__row}>
             <QuoteFormItem
