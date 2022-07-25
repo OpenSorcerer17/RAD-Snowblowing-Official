@@ -47,3 +47,8 @@
     max-height: auto;
     top: 15rem;
 }
+
+.video {
+    position: relative;
+    margin-top: 5rem;
+}
