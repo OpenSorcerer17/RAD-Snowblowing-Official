@@ -4,6 +4,7 @@ import Navbar from "./components/UI/Navbar";
 import QuoteForm from "./components/UI/QuoteForm";
 import Footer from "./components/UI/Footer";
 import React, { Fragment } from "react";
+import FAQ from "./components/UI/FAQ";
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
       <Landing />
       <div className="container">
         <QuoteForm />
+        <FAQ />
+        <Footer />
       </div>
-      <Footer />
     </Fragment>
   );
 }

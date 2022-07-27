@@ -4,7 +4,7 @@ import classes from "./Footer.module.css";
 const Footer = (props) => {
   return (
     <footer className={classes.footer}>
-      <ul>
+      <ul className={classes.list}>
         <li>
           <i class="fas fa-map-marker-alt fa-2x" />
           <p>Location</p>

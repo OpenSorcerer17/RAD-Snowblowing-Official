@@ -1,8 +1,8 @@
 .quote__container {
     background-color: #f1eded;
     width: 100%;
-    height: 94vh;
-    padding-top: 50px;
+    height: 100vh;
+    padding-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +14,7 @@
     text-align: left;
     line-height: 26px;
     padding: 0 20px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 .quote__container form {
