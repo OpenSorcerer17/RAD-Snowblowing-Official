@@ -1,3 +1,8 @@
+.container {
+  justify-content: center;
+  display: flex;
+}
+
 .backdrop {
     position: fixed;
     top: 0;
@@ -9,33 +14,33 @@
   }
   
   .modal {
-    margin: 0 15rem;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: fixed;
     text-align: center;
     top: 20vh;
     background-color: white;
     padding: 1rem;
     border-radius: 14px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     z-index: 30;
-    animation: slide-down 300ms ease-out forwards;
   }
 
-  .modal button {
-    margin-top: 1rem;
-        width: 100px;
-        margin-left: 20px;
-        margin-bottom: 15px;
-        background-color: #04AA6D;
-        border: none;
-        color: white;
-        padding: 16px 28px;
-        border-radius: 4px;
-        text-decoration: none;
-        cursor: pointer;
+  .modalbutton {
+
+    margin-top: 10px;
+    width: 100px;
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
   }
 
-  .modal button:hover {
+  .modalbutton:hover {
     background-color: #058757;
   }
 

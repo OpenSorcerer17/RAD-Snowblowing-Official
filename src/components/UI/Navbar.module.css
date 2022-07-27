@@ -27,7 +27,8 @@
     text-decoration: none;
 }
 
-.navbar a:hover {
+.navbar_item:hover {
     color: white;
     border-bottom: 3px solid #164f91;
+    cursor: pointer;
 }
