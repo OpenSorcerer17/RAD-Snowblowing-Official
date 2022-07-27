@@ -15,7 +15,6 @@ const QuoteForm = (props) => {
   const [city, setCity] = useState("");
   const [additionalInfo, setAdditionalInfo] = useState("");
   const [error, setError] = useState("");
-  const [deIce, setDeIce] = useState("No Deicing");
   const [shovel, setShovel] = useState("No Shoveling");
   const [showModal, setShowModal] = useState(false);
 
@@ -39,16 +38,15 @@ const QuoteForm = (props) => {
       phone: phone,
       address: address,
       city: city,
-      deIce: deIce,
       shovel: shovel,
       additionalInfo: additionalInfo,
     };
-    // emailjs.send(
-    //   "service_2sunubk",
-    //   "template_csywi4g",
-    //   emailToSend,
-    //   "1bTVL6KPTvsqyHpBj"
-    // );
+    emailjs.send(
+      "service_2sunubk",
+      "template_csywi4g",
+      emailToSend,
+      "1bTVL6KPTvsqyHpBj"
+    );
 
     event.target.reset();
     setShowModal(true);
@@ -132,18 +130,6 @@ const QuoteForm = (props) => {
             />
           </div>
           <div className={classes.quote__container__checkbox}>
-            <QuoteFormItem
-              changeHandler={(e) => {
-                setDeIce("No Deicing");
-                if (e.target.checked) {
-                  setDeIce("I would like Deicing Services.");
-                }
-              }}
-              content="I want de-icing services"
-              inputType="checkbox"
-              inputName="deIce"
-              inputId="deIce"
-            />
             <QuoteFormItem
               changeHandler={(e) => {
                 setShovel("No Shoveling");
