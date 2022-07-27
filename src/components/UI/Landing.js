@@ -19,12 +19,14 @@ const Landing = (props) => {
         </Link>
         <div className={classes.video}>
           <iframe
-            src="https://www.youtube.com/embed/tonGoVIYdA4?rel=0&amp;autoplay=1&mute=1"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/tonGoVIYdA4?autoplay=1&mute=1"
+            title="YouTube video player"
             frameborder="0"
-            allow="autoplay; encrypted-media"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
-            title="Snowblower"
-          />{" "}
+          ></iframe>
         </div>
       </div>
     </div>
