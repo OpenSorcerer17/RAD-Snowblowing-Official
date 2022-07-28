@@ -29,6 +29,16 @@
     width: 300px;
 }
 
+span {
+    color: red;
+}
+
+.error {
+    color: red;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
 .quote__container__row {
     display: flex;
     flex-direction: row;

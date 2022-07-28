@@ -2,6 +2,10 @@
     background: #f1eded;
 }
 
+h1 {
+    margin-bottom: 20px;
+}
+
 #faq_header {
     text-align: center;
 }

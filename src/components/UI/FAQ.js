@@ -12,7 +12,7 @@ const FAQ = (props) => {
       />
       <FAQItem
         question="What is the minimum snow fall that mus be on the ground for us to take action?"
-        answer="We automatically get tired rolling after 2 inches of snow has fallen."
+        answer="We automatically get tires rolling after 2 inches of snow has fallen."
       />
       <FAQItem
         question="Is there a limit to the number of times you service property each winter?"

@@ -20,6 +20,7 @@ const QuoteFormItem = (props) => {
       {props.inputType !== "checkbox" && (
         <label>
           {props.content}
+          <span>*</span>
           <input
             id={props.inputId}
             type={props.inputType}

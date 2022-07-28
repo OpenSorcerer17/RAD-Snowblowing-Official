@@ -152,7 +152,7 @@ const QuoteForm = (props) => {
             ></textarea>
           </div>
           <button type="submit">Submit</button>
-          {error && <p>{error}</p>}
+          {error && <p className={classes.error}>{error}</p>}
         </form>
       </div>
     </Fragment>
