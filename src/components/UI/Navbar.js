@@ -8,9 +8,16 @@ const Navbar = (props) => {
 
   return (
     <nav className={classes.navbar}>
-      <a href="#home" className={classes["brand-name"]}>
+      <Link
+        className={classes["brand-name"]}
+        to="home"
+        spy={true}
+        smooth={true}
+        duration={700}
+        onClick={() => setIsNavExpanded(false)}
+      >
         RAD Snowblowing
-      </a>
+      </Link>
       <button
         className={classes.hamburger}
         onClick={() => {
@@ -73,20 +80,6 @@ const Navbar = (props) => {
             </Link>
           </li>
         </ul>
-        <div className={classes.icon_menus}>
-          <div className={classes.icon_menu_item}>
-            <i class="fas fa-phone mt-4 fa-1x" />
-            <p>Phone Number</p>
-          </div>
-          <div className={classes.icon_menu_item}>
-            <i class="fas fa-envelope mt-4 fa-1x" />
-            <p>Contact Us</p>
-          </div>
-          <div className={classes.icon_menu_item}>
-            <i class="fas fa-map-marker-alt fa-1x" />
-            <p>Location</p>
-          </div>
-        </div>
       </div>
     </nav>
   );

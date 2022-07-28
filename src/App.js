@@ -21,7 +21,6 @@ function App() {
             <FAQ />
           </div>
         </div>
-        {/* <Footer /> */}
       </div>
     </Fragment>
   );
