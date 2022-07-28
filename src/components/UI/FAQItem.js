@@ -14,12 +14,12 @@ const FAQItem = (props) => {
     setIsItemClicked(true);
   };
   return (
-    <div className={classes.item_container}>
+    <div onClick={itemClickHandler} className={classes.item_container}>
       <div className={classes.question}>
         <h3>{props.question}</h3>
         <button
           onClick={itemClickHandler}
-          className={classNames('fas', isItemClicked ? 'fa-minus' :'fa-plus')}
+          className={classNames("fas", isItemClicked ? "fa-minus" : "fa-plus")}
         ></button>
       </div>
       {isItemClicked === true && (
