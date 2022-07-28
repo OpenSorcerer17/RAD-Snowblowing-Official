@@ -1,4 +1,5 @@
 import React, { useState, Fragment } from "react";
+import { classNames } from "../../common/helpers";
 import classes from "./FAQItem.module.css";
 
 const FAQItem = (props) => {
@@ -18,10 +19,7 @@ const FAQItem = (props) => {
         <h3>{props.question}</h3>
         <button
           onClick={itemClickHandler}
-          className={
-            (isItemClicked === false && `fas fa-plus`) ||
-            (isItemClicked === true && `fas fa-minus`)
-          }
+          className={classNames('fas', isItemClicked ? 'fa-minus' :'fa-plus')}
         ></button>
       </div>
       {isItemClicked === true && (

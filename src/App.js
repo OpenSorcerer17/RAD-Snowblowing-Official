@@ -5,16 +5,23 @@ import QuoteForm from "./components/UI/QuoteForm";
 import Footer from "./components/UI/Footer";
 import React, { Fragment } from "react";
 import FAQ from "./components/UI/FAQ";
+import { useDetectDeviceSize } from "./hooks/useDetectIsMobileView";
 
 function App() {
+  const { isMobileView } = useDetectDeviceSize();
+
   return (
     <Fragment>
       <Navbar />
-      <Landing />
       <div className="container">
-        <QuoteForm />
-        <FAQ />
-        <Footer />
+        <Landing />
+        <div className="inner-container">
+          <div className="sections">
+            <QuoteForm />
+            <FAQ />
+          </div>
+        </div>
+        {/* <Footer /> */}
       </div>
     </Fragment>
   );
