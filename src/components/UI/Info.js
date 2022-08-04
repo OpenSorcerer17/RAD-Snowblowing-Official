@@ -79,7 +79,7 @@ const Info = (props) => {
       </p>
       <h1>Seasonal Plan</h1>
       <p className={classes.info_paragraph}>
-        With our seasonal plan you have the opoprtunity to save money. The
+        With our seasonal plan you have the opportunity to save money. The
         seasonal contract has one fixed reasonable cost for the entire 5 months
         season, November 15th - April 15th. No matter how many times it snows,
         our tractors will be there to clear your driveway when there is a
