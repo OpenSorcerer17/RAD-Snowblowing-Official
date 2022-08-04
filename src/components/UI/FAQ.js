@@ -8,7 +8,7 @@ const FAQ = (props) => {
       <h1 id={classes.faq_header}>Frequently Asked Questions</h1>
       <FAQItem
         question="What areas do we cover?"
-        answer="We service residential driveways in the lorem ipsum."
+        answer="We service residential driveways in the Burnt Hills Area."
       />
       <FAQItem
         question="What is the minimum snow fall that mus be on the ground for us to take action?"
@@ -40,7 +40,7 @@ const FAQ = (props) => {
       />
       <FAQItem
         question="When are seasonal contracts due?"
-        answer="the first payment is due by November 1st, and the second payment is due by January 1st."
+        answer="First payment is due by November 1st, and the second payment is due by January 1st."
       />
       <FAQItem
         question="What are our prices?"
@@ -48,7 +48,7 @@ const FAQ = (props) => {
       />
       <FAQItem
         question="What methods of payment do you accept?"
-        answer="Payment can be made by check to lorem ipsum."
+        answer="Payment can be made by check to RAD Snowblowing."
       />
       <FAQItem
         question="Do you have a seasonal snowfall limit?"
@@ -97,6 +97,10 @@ const FAQ = (props) => {
       <FAQItem
         question="What has to be done to prepare my driveway for our services?"
         answer="All Summer items such as flower pots / planters, downspouts, recycling bins, garbage cans, basketball hoops, children's toys, extension cords, or any other miscallaneous items need to be remove from the driveway so that our tractors do not come into contact with them. We are not responsible for damages to any of these items if they are left on your driveway."
+      />
+      <FAQItem
+        question="After I receive an estimate what is the process?"
+        answer={`We will email you our estimate. If acceptable, sign and return with 1st payment to: RAD Snowblowing, 6 Glenridge Rd. PO Box 2951, Schenectady NY 12302`}
       />
     </div>
   );

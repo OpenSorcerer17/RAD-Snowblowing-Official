@@ -57,6 +57,18 @@ const Navbar = (props) => {
           </li>
           <li>
             <Link
+              to="info"
+              spy={true}
+              smooth={true}
+              duration={700}
+              offset={-110}
+              onClick={() => setIsNavExpanded(false)}
+            >
+              Info
+            </Link>
+          </li>
+          <li>
+            <Link
               to="pricing"
               spy={true}
               smooth={true}

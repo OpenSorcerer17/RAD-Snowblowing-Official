@@ -66,7 +66,7 @@ const QuoteForm = (props) => {
       )}
 
       <div className={classes.quote__container} id="pricing">
-        <h1>Fill out the form below to get your quote!</h1>
+        <h1>Fill out the form below to get your free quote!</h1>
         <form onSubmit={onSubmitHandler} ref={form}>
           <div className={classes.quote__container__row}>
             <QuoteFormItem

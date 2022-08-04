@@ -1,0 +1,38 @@
+.bold_span {
+    font-weight: bold;
+    color: black;
+}
+
+h1 {
+    text-align: center;
+}
+
+.info_paragraph {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.info_list li{
+    display: list-item;
+    list-style-type: disc;
+    margin-left: 50px;
+}
+
+.info {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.picture{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 400px;
+    width: 100%;
+    background-image: url('/src/images/snowblow_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}

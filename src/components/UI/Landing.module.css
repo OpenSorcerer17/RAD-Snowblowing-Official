@@ -1,7 +1,7 @@
 .landing__container {
     width: 100%;
     height: 100vh;
-    background-image: url('/public/images/snowblow_bg.jpg');
+    background-image: url('/src/images/snowblow_bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -65,9 +65,15 @@ iframe {
     border: 1px solid black;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 755px) {
     .video {
         width: 350px;
         height: 350px;
     }
+
+    .landing__content h1 {
+            font-size: 40px;
+        
+    }
+
 }
