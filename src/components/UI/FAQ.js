@@ -11,8 +11,8 @@ const FAQ = (props) => {
         answer="We service residential driveways in the Burnt Hills Area."
       />
       <FAQItem
-        question="What is the minimum snow fall that mus be on the ground for us to take action?"
-        answer="We automatically get tires rolling after 2 inches of snow has fallen."
+        question="What is the minimum snow fall that must be on the ground for us to take action?"
+        answer="We will clear your driveway whenever 2 inches or more of snow has accumulated."
       />
       <FAQItem
         question="Is there a limit to the number of times you service property each winter?"
@@ -64,7 +64,7 @@ const FAQ = (props) => {
       />
       <FAQItem
         question="If I call during a snowstorm, will there be someone in the office to answer the phone?"
-        answer="Possibly, but sometimes our office manager is out helping the operators in the field with different duties. If he doesn't answer it is in your best interest to leave a message and your call will be returned ASAP."
+        answer="Possibly, but sometimes our office manager is out helping the operators in the field with different duties. If he doesn't answer please leave a message and your call will be returned ASAP."
       />
       <FAQItem
         question="Are we insured?"
@@ -72,7 +72,7 @@ const FAQ = (props) => {
       />
       <FAQItem
         question="How can we contact you?"
-        answer="On snow days we suggest calling us only if there is a special need, but you may have to leave a message."
+        answer="On snow days we suggest calling us only if there is a special need. We also monitor our email daily at RADsnowblowing@gmail.com"
       />
       <FAQItem
         question="Can I leave cars parked on my driveway?"

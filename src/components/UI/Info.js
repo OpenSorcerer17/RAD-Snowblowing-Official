@@ -10,7 +10,7 @@ const Info = (props) => {
         to mention piling up high snow banks along and at the ends of your
         driveway, <span className={classes.bold_span}>give us a call!</span>{" "}
         High piles of snow are a safety hazard and prevent you from seeing
-        oncoming traffic as you are backing outy of your driveway. Also, who
+        oncoming traffic as you are backing out of your driveway. Also, who
         wants to always fix the lawn damage in the spring from what the snow
         plow has done. We can solve these problems along with giving you the
         most cost effective and efficient way to clear snow from your driveway.
@@ -80,9 +80,9 @@ const Info = (props) => {
       <h1>Seasonal Plan</h1>
       <p className={classes.info_paragraph}>
         With our seasonal plan you have the opportunity to save money. The
-        seasonal contract has one fixed reasonable cost for the entire 5 months
-        season, November 15th - April 15th. No matter how many times it snows,
-        our tractors will be there to clear your driveway when there is a
+        seasonal contract has one fixed reasonable cost per month for the entire
+        5 month season, November 15th - April 15th. No matter how many times it
+        snows, our tractors will be there to clear your driveway when there is a
         minimum of 2 inches of snow on the ground. There are{" "}
         <span className={classes.bold_span}>
           No extra hidden costs. No surprise charges. No charges for return

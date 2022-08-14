@@ -40,12 +40,12 @@ const QuoteForm = (props) => {
       shovel: shovel,
       additionalInfo: additionalInfo,
     };
-    // emailjs.send(
-    //   "service_2sunubk",
-    //   "template_csywi4g",
-    //   emailToSend,
-    //   "1bTVL6KPTvsqyHpBj"
-    // );
+    emailjs.send(
+      "service_2sunubk",
+      "template_csywi4g",
+      emailToSend,
+      "1bTVL6KPTvsqyHpBj"
+    );
 
     event.target.reset();
     setShowModal(true);
